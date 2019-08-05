@@ -41,6 +41,7 @@ public class MainActivity extends Activity {
 			rp.interrupt();
 			rp = null;
 		}
+		System.out.println("onDestroy");
 	}
 
     
@@ -59,4 +60,14 @@ public class MainActivity extends Activity {
     public void closewc(View v){
     	WatchDogNative.closedev();
     }
+
+    public void systemExit(View v){
+		System.out.println("System exit 0");
+		System.exit(0);
+	}
+
+	public void finishAct(View v){
+		System.out.println("Activity Finish");
+		this.finish();
+	}
 }

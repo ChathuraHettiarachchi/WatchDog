@@ -1,24 +1,54 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="100dp"
+    android:padding="30dp"
     tools:context="cn.sibo.testdog.MainActivity" >
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:onClick="openwc"
-        android:text="open" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:onClick="closewc"
-        android:text="close" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="openwc"
+                android:text="Open - Open WatchDog" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="closewc"
+                android:text="Close - To Mimic Freeze" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="systemExit"
+                android:layout_marginTop="20dp"
+                android:text="System Exit (0) Test"
+                android:textColor="#fff"
+                android:background="#FF0000"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:onClick="finishAct"
+                android:text="Activity Finish Test"
+                android:textColor="#fff"
+                android:background="#FF0000"/>
+        </LinearLayout>
 
 
-</LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
